@@ -52,7 +52,7 @@
 @media only screen and (min-width: 700px) {   
 .box:hover{
     height:100%;
-    border-radius: 5px;
+    border-radius: 0px;
     width:80%;
     overflow: hidden;
     margin:0.2%;
@@ -70,6 +70,8 @@
     top:50px;
     font-family: 'Secular One', sans-serif;
     font-size: 10vw;
+    opacity: 0;
+    animation:title 2s 0s forwards ease-in-out;
 }}
 @media only screen and (max-width: 700px) { 
     .title{
@@ -80,6 +82,9 @@
         top:0px;
         font-family: 'Secular One', sans-serif;
         font-size: 10vw;
+        opacity: 0;
+        animation:title 2s 0s forwards ease-in-out;
+        
     background-color: white;
     }}
 @media only screen and (min-width: 700px) { 
@@ -92,7 +97,7 @@
 }}
 @media only screen and (max-width: 700px) { 
     .title2{
-        z-index: 1;
+        z-index: -1;
         position:sticky;
         right:0%;
         margin-bottom:5%;
@@ -130,4 +135,8 @@ img{
     0%{width:30%;border-radius: 25px;background-color: rgb(59, 59, 59);color:white;}
     100%{width:80%;border-radius: 0px;background-color: rgb(255, 255, 255);color:black;box-shadow: 15px 0px 0px 0px rgb(0, 0, 0);}
 
+}
+@keyframes title {
+    0%{opacity: 0;translate:20px 0px;}
+    100%{opacity: 1;translate:0px 0px;}
 }
